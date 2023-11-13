@@ -7,24 +7,24 @@ import java.util.Map;
 
 public class House {
     public static void main(String[] args) {
-        Map<Integer, String> nameAndAge = new HashMap<>();
-        nameAndAge.put(25, "Иванов Иван Иванович");
-        nameAndAge.put(35, "Петрова Мария Васильевна");
-        nameAndAge.put(40, "Сидоров Александр Петрович");
-        nameAndAge.put(30, "Кузнецова Ольга Александровна");
-        nameAndAge.put(28, "Васильев Сергей Игоревич");
-        nameAndAge.put(32, "Никитина Анна Дмитриевна");
-        nameAndAge.put(15, "Михайлов Антон Владимирович");
-        nameAndAge.put(13, "Козлов Максим Андреевич");
-        nameAndAge.put(31, "Лебедева Юлия Олеговна");
-        nameAndAge.put(29, "Егоров Дмитрий Анатольевич");
+        Map<String, Integer> nameAndAge = new HashMap<>();
+        nameAndAge.put("Иванов Иван Иванович", 25);
+        nameAndAge.put("Петрова Мария Васильевна", 35);
+        nameAndAge.put("Сидоров Александр Петрович", 40);
+        nameAndAge.put("Кузнецова Ольга Александровна", 30);
+        nameAndAge.put("Васильев Сергей Игоревич", 28);
+        nameAndAge.put("Никитина Анна Дмитриевна", 32);
+        nameAndAge.put("Михайлов Антон Владимирович", 15);
+        nameAndAge.put("Козлов Максим Андреевич", 13);
+        nameAndAge.put("Лебедева Юлия Олеговна",31);
+        nameAndAge.put("Егоров Дмитрий Анатольевич",29);
 
         List<String> adults = new ArrayList<>();
-        for (Map.Entry<Integer, String> entry : nameAndAge.entrySet()) {
-            if (18 > entry.getKey()) {
-                adults.add(entry.getValue());
+        for (Map.Entry<String, Integer> entry : nameAndAge.entrySet()) {
+            if (entry.getValue() > 18) {
+                adults.add(entry.getKey());
             }
         }
-        System.out.println("Этим жильцам дома нет 18 лет: " + adults);
+        System.out.println("Этим жильцам дома есть 18 лет: " + adults);
     }
 }
