@@ -16,8 +16,8 @@ public class House {
         nameAndAge.put("Никитина Анна Дмитриевна", 32);
         nameAndAge.put("Михайлов Антон Владимирович", 15);
         nameAndAge.put("Козлов Максим Андреевич", 13);
-        nameAndAge.put("Лебедева Юлия Олеговна",31);
-        nameAndAge.put("Егоров Дмитрий Анатольевич",29);
+        nameAndAge.put("Лебедева Юлия Олеговна", 31);
+        nameAndAge.put("Егоров Дмитрий Анатольевич", 29);
 
         List<String> adults = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : nameAndAge.entrySet()) {
